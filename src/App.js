@@ -13,6 +13,7 @@ import CheerButton from './Components/CheerButton'
 import MainCard from './Components/MainCard'
 import CardContainer from './Components/CardContainer'
 import CardCaption from './Components/CardCaption'
+import Loading from './Components/Loading'
 import { SecondaryCardOne, SecondaryCardTwo, SecondaryCardThree } from './Components/SecondaryCard'
 
 import './App.css'
@@ -24,21 +25,24 @@ class App extends Component {
       beer: {
         name: 'Cheers!',
         image_url: Beer
-      }
+      },
+      loading: false
     }
   }
 
   async random () {
+    this.setState({ loading: true })
     let result = await axios.get('https://api.punkapi.com/v2/beers/random').then(response => response.data)
-    this.setState({ beer: result[0] })
+    this.setState({ beer: result[0], loading: false })
   }
 
   render () {
-    const { beer } = this.state
+    const { beer, loading } = this.state
 
     return (
       <Fragment>
         <TopLine />
+        {loading && <Loading />}
         <Container>
           <Header>BEER FOR TODAY</Header>
           <SubHeader>LET’S HAVE SOME FUN</SubHeader>
@@ -51,7 +55,7 @@ class App extends Component {
               <ImageWrapper>
                 <Image src={beer.image_url} />
               </ImageWrapper>
-              <CardCaption>{beer.name}</CardCaption>
+              <CardCaption>{beer.name}<br />{beer.abv && `(${beer.abv} %)`}</CardCaption>
             </MainCard>
             <SecondaryCardOne><Image src={Beer} /></SecondaryCardOne>
             <SecondaryCardTwo><Image src={Beer} /></SecondaryCardTwo>

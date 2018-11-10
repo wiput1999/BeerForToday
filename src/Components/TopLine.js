@@ -7,6 +7,7 @@ const Container = styled.div`
   top: 0;
   position: fixed;
   background-color: #173854;
+  z-index: 2000;
 `
 
 const Notch = styled.div`

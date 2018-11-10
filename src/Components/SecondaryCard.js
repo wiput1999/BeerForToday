@@ -14,6 +14,10 @@ const SecondaryCardTwo = styled(Card)`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 975px) {
+    display: none;
+  }
 `
 
 const SecondaryCardThree = styled(Card)`
@@ -21,6 +25,12 @@ const SecondaryCardThree = styled(Card)`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 1440px) {
+    display: none;
+  }
+
+
 `
 
 export { SecondaryCardOne, SecondaryCardTwo, SecondaryCardThree }
