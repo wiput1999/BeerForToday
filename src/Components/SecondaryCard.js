@@ -1,16 +1,15 @@
-
 import styled from 'styled-components'
 import Card from './Card'
 
 const SecondaryCardOne = styled(Card)`
-  background-color: #CFD9D5;
+  background-color: #cfd9d5;
   display: flex;
   justify-content: center;
   align-items: center;
 `
 
 const SecondaryCardTwo = styled(Card)`
-  background-color: #E1EDE7;
+  background-color: #e1ede7;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,7 +20,7 @@ const SecondaryCardTwo = styled(Card)`
 `
 
 const SecondaryCardThree = styled(Card)`
-  background-color: #EDF7F3;
+  background-color: #edf7f3;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -29,8 +28,6 @@ const SecondaryCardThree = styled(Card)`
   @media (max-width: 1440px) {
     display: none;
   }
-
-
 `
 
 export { SecondaryCardOne, SecondaryCardTwo, SecondaryCardThree }

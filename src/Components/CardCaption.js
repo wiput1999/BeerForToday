@@ -8,7 +8,7 @@ const CardCaption = styled.div`
   color: #000;
   border-radius: 16px;
   opacity: 0;
-  background-color: rgba(255,255,255, 0.7);
+  background-color: rgba(255, 255, 255, 0.7);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,7 +19,6 @@ const CardCaption = styled.div`
   &:hover {
     opacity: 1;
   }
-
 `
 
 export default CardCaption

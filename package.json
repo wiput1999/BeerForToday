@@ -25,5 +25,15 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "standard": {
+    "parser": "babel-eslint",
+    "ignore": [
+      "build/*"
+    ],
+    "env": [
+      "es6",
+      "browser"
+    ]
+  }
 }

@@ -28,11 +28,12 @@ const Container = styled.div`
 const LoadingImage = styled.img`
   width: 15vw;
   animation: ${rotate} 2s linear infinite;
-
 `
 
-const Loading = ({ className }) => (<Container className={className}>
-  <LoadingImage src={Beer} />
-</Container>)
+const Loading = ({ className }) => (
+  <Container className={className}>
+    <LoadingImage src={Beer} />
+  </Container>
+)
 
 export default Loading

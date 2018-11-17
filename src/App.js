@@ -48,18 +48,34 @@ class App extends Component {
           <SubHeader>LET’S HAVE SOME FUN</SubHeader>
           <CheerButton onClick={() => this.random()}>Cheers!</CheerButton>
           <CardContainer>
-            <SecondaryCardThree><Image src={Beer} /></SecondaryCardThree>
-            <SecondaryCardTwo><Image src={Beer} /></SecondaryCardTwo>
-            <SecondaryCardOne><Image src={Beer} /></SecondaryCardOne>
+            <SecondaryCardThree>
+              <Image src={Beer} />
+            </SecondaryCardThree>
+            <SecondaryCardTwo>
+              <Image src={Beer} />
+            </SecondaryCardTwo>
+            <SecondaryCardOne>
+              <Image src={Beer} />
+            </SecondaryCardOne>
             <MainCard>
               <ImageWrapper>
                 <Image src={beer.image_url} />
               </ImageWrapper>
-              <CardCaption>{beer.name}<br />{beer.abv && `(${beer.abv} %)`}</CardCaption>
+              <CardCaption>
+                {beer.name}
+                <br />
+                {beer.abv && `(${beer.abv} %)`}
+              </CardCaption>
             </MainCard>
-            <SecondaryCardOne><Image src={Beer} /></SecondaryCardOne>
-            <SecondaryCardTwo><Image src={Beer} /></SecondaryCardTwo>
-            <SecondaryCardThree><Image src={Beer} /></SecondaryCardThree>
+            <SecondaryCardOne>
+              <Image src={Beer} />
+            </SecondaryCardOne>
+            <SecondaryCardTwo>
+              <Image src={Beer} />
+            </SecondaryCardTwo>
+            <SecondaryCardThree>
+              <Image src={Beer} />
+            </SecondaryCardThree>
           </CardContainer>
         </Container>
       </Fragment>
